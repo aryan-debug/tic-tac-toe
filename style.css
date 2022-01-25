@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --yellow-color: #fcf89f;
+  --blue-color: #84d3ff;
+  --font-one: "Fredoka One", cursive;
+  --font-two: "Titan One", cursive;
+}
+body {
+  background-color: #84d3ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#tic-tac-toe-heading {
+  margin-top: 100px;
+  font-size: 6em;
+  font-family: var(--font-two);
+  color: var(--yellow-color);
+}
+.yellow-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  font-size: 2.5em;
+  border-radius: 100px;
+  padding: 30px;
+  background-color: var(--yellow-color);
+  color: var(--blue-color);
+  font-family: var(--font-one);
+  position: relative;
+  transition: transform 300ms ease-out;
+  width: 350px;
+}
+#buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 100px;
+}
+.yellow-btn:hover {
+  transform: scale(1.15);
+  cursor: pointer;
+  transition: transform 300ms cubic-bezier(0, 0, 0.37, 2.29);
+}
+#players-info {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+.player-info > h1 {
+  font-family: var(--font-one);
+  color: var(--yellow-color);
+  font-size: 2em;
+}
+.player-info > input {
+  width: 350px;
+  height: 50px;
+  background-color: var(--yellow-color);
+  border: none;
+  border-radius: 100px;
+  padding-left: 20px;
+  color: var(--blue-color);
+  font-family: var(--font-one);
+  font-size: 1.5em;
+  margin-top: 20px;
+}
+#submit-btn {
+  width: 250px;
+  height: 80px;
+  margin-top: 20px;
+}
+.player-info > input:focus {
+  outline: none;
+}
+a {
+  text-decoration: none;
+}
+#player-turn-heading {
+  font-size: 3em;
+  font-family: var(--font-two);
+  color: var(--yellow-color);
+  margin-top: 100px;
+}
+#play-grid {
+  display: grid;
+  grid-template-rows: repeat(3, 100px);
+  grid-template-columns: repeat(3, 100px);
+  margin-top: 70px;
+}
+.left {
+  border-right: 10px solid var(--yellow-color);
+}
+.bottom {
+  border-bottom: 10px solid var(--yellow-color);
+}
+
+.player-buttons {
+  margin-top: 50px;
+  display: flex;
+  gap: 50px;
+}
+.player-buttons button {
+  width: 200px;
+  font-size: 2em;
+  height: 75px;
+}
+.player-buttons button i {
+  margin-right: 10px;
+}
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-one);
+  color: var(--yellow-color);
+  font-size: 4em;
+}
+.my-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#overlay-content {
+  font-size: 5em;
+  font-family: var(--font-one);
+  color: var(--yellow-color);
+}
+.active {
+  display: flex;
+}
